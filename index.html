@@ -4,33 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/style.css" type="text/css" />
     <title>reviews</title>
   </head>
   <body>
     <h1>Nos Reviews</h1>
     <main>
-      <img
-        src="profile-pictures/clement-chouan.jpg"
-        alt="Photo de la personne"
-        class="pp"
-      />
-      <h3 class="name">Clément Chouan</h3>
-      <p class="job-title">Développeur Web</p>
-      <p class="description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-        deserunt provident nisi voluptatem obcaecati, tempora quo, error
-        pariatur reprehenderit quae natus doloribus itaque quisquam magni
-        consectetur quia labore, id ipsa.
-      </p>
-      <div>
-        <button class="previous"><</button>
-        <button class="next">></button>
-      </div>
-      <br />
-      <button class="surprise">Suprenez-moi</button>
+      <article>
+        <img
+          src="profile-pictures/clement-chouan.jpg"
+          alt="Photo de la personne"
+          class="pp"
+          id="person-img"
+        />
+        <h3 class="name" id="author">Clément Chouan</h3>
+        <p class="job-title" id="job">Développeur Web</p>
+        <p class="description" id="info">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+          deserunt provident nisi voluptatem obcaecati, tempora quo, error
+          pariatur reprehenderit quae natus doloribus itaque quisquam magni
+          consectetur quia labore, id ipsa.
+        </p>
+        <div>
+          <button class="previous"><</button>
+          <button class="next">></button>
+        </div>
+        <br />
+        <button class="surprise">Suprenez-moi</button>
+      </article>
     </main>
 
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

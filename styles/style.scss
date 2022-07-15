@@ -1,44 +1,117 @@
+@import "../scss/_functions.scss";
+
+$pagecolor: #57abdf;
+$bodycolor: #f2f8fe;
+
 body {
   margin: 0;
   padding: 0;
+  font-family: "Hind", sans-serif;
+  background-color: $bodycolor;
 }
 
 h1 {
   text-align: center;
   font-size: 2.5rem;
-  margin: 10vh auto 0;
+  margin: 30px auto 25px 0;
+
+  @media screen and (max-width: 450px) {
+    font-size: 1.5rem;
+  }
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 75vh;
-  .pp {
-    object-fit: cover;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-  }
+  height: 100%;
+  max-width: 100%;
+  @include center-div;
+  article {
+    @include center-div;
+    width: 450px;
+    height: 560px;
+    box-shadow: 0 0 7px rgb(218, 218, 218);
+    border-radius: 10px;
+    background-color: white;
 
-  .name {
-    margin-bottom: 0;
-    font-size: 1.5rem;
-  }
-
-  .job-title {
-    margin-top: 10px;
-  }
-
-  .description {
-    width: 80%;
-    text-align: center;
-    @media screen and (min-width: 768px) {
-      width: 60%;
+    @media screen and (max-width: 450px) {
+      font-size: 0.7rem;
+      box-shadow: none;
+      margin-top: 10%;
+      background-color: $bodycolor;
+      max-width: 100vw;
     }
-    @media screen and (min-width: 1024px) {
-      width: 30%;
+    .pp {
+      object-fit: cover;
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      box-shadow: 6px -6px 0 6px $pagecolor;
+      margin: 25px auto 0;
+
+      @media screen and (max-width: 450px) {
+        height: 100px;
+        width: 100px;
+        box-shadow: 4px -4px 0 4px $pagecolor;
+      }
+    }
+
+    .name {
+      margin-bottom: 0;
+      font-size: 1.5rem;
+
+      @media screen and (max-width: 450px) {
+        font-size: 1rem;
+      }
+    }
+
+    .job-title {
+      margin-top: 0;
+      color: $pagecolor;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    .description {
+      width: 80%;
+      text-align: center;
+
+      @media screen and (max-width: 450px) {
+        height: 100%;
+        width: 35%;
+      }
+    }
+
+    button {
+      color: $pagecolor;
+      font-weight: bolder;
+
+      &:hover {
+        color: lightblue;
+      }
+    }
+
+    .previous {
+      @include no-style;
+      margin: auto 10px 0 auto;
+      font-size: 2rem;
+    }
+
+    .next {
+      @include no-style;
+      margin: auto auto 0 10px;
+      font-size: 2rem;
+    }
+
+    .surprise {
+      letter-spacing: 1px;
+      padding: 5px;
+      margin: 0 auto 10px;
+      border: solid $pagecolor;
+      border-radius: 10px;
+      background-color: $bodycolor;
+
+      &:hover {
+        border: solid lightblue;
+      }
     }
   }
 }
